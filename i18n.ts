@@ -1,0 +1,61 @@
+export type Lang = 'en' | 'pa';
+
+export const T = {
+  en: {
+    allDistricts: 'All Districts',
+    heroTitle: 'Explore the 23 Districts of Punjab',
+    heroText: 'From the industries of Ludhiana to the holy shrines of Amritsar. Discover the history, culture, and educational hubs of the entire state.',
+    search: 'Search district (e.g., Patiala, Bathinda)...',
+    selectDistrict: 'Select a District',
+    explore: 'Explore',
+    exploreBest: (cat: string, name: string) => `Explore the best ${cat} spots in ${name}.`,
+    comingSoon: 'More information coming soon for this category.',
+    footer1: 'Covering all 23 Districts of Punjab',
+    footer2: 'Built for the future of Indian Tourism.',
+    cat: {
+      history: 'History', religious: 'Religious', nature: 'Nature & Wildlife', heritage: 'Heritage',
+      food: 'Food & Dhabas', shopping: 'Shopping', education: 'Education', culture: 'Culture',
+      accommodation: 'Stay', industry: 'Industry', farm: 'Farm Houses',
+    } as Record<string, string>,
+    chatHello: 'Sat Sri Akal! I am your HPN Explorer guide. Ask me about any district in Punjab!',
+    chatDistrict: (d: string) => `I see you are looking at ${d}. How can I help you with its history, food, or industry?`,
+    chatPlaceholder: 'Ask about places...',
+    chatThinking: 'Thinking...',
+    chatError: 'Network error. Please try again.',
+    chatGuide: (d?: string) => (d ? `${d} Guide` : 'Punjab Guide'),
+    chatWarn: 'AI answers can be wrong. Please verify important facts.',
+  },
+  pa: {
+    allDistricts: 'ਸਾਰੇ ਜ਼ਿਲ੍ਹੇ',
+    heroTitle: 'ਪੰਜਾਬ ਦੇ 23 ਜ਼ਿਲ੍ਹਿਆਂ ਦੀ ਸੈਰ ਕਰੋ',
+    heroText: 'ਲੁਧਿਆਣੇ ਦੇ ਕਾਰਖਾਨਿਆਂ ਤੋਂ ਲੈ ਕੇ ਅੰਮ੍ਰਿਤਸਰ ਦੇ ਪਵਿੱਤਰ ਅਸਥਾਨਾਂ ਤੱਕ। ਪੂਰੇ ਸੂਬੇ ਦਾ ਇਤਿਹਾਸ, ਸੱਭਿਆਚਾਰ ਤੇ ਸਿੱਖਿਆ ਦੇ ਕੇਂਦਰ ਜਾਣੋ।',
+    search: 'ਜ਼ਿਲ੍ਹਾ ਲੱਭੋ (ਜਿਵੇਂ ਪਟਿਆਲਾ, ਬਠਿੰਡਾ)...',
+    selectDistrict: 'ਜ਼ਿਲ੍ਹਾ ਚੁਣੋ',
+    explore: 'ਦੇਖੋ',
+    exploreBest: (cat: string, name: string) => `${name} ਦੀਆਂ ਸਭ ਤੋਂ ਵਧੀਆ ਥਾਵਾਂ: ${cat}।`,
+    comingSoon: 'ਇਸ ਭਾਗ ਦੀ ਹੋਰ ਜਾਣਕਾਰੀ ਜਲਦੀ ਆ ਰਹੀ ਹੈ।',
+    footer1: 'ਪੰਜਾਬ ਦੇ ਸਾਰੇ 23 ਜ਼ਿਲ੍ਹਿਆਂ ਦੀ ਜਾਣਕਾਰੀ',
+    footer2: 'ਭਾਰਤੀ ਸੈਰ-ਸਪਾਟੇ ਦੇ ਭਵਿੱਖ ਲਈ ਬਣਾਇਆ ਗਿਆ।',
+    cat: {
+      history: 'ਇਤਿਹਾਸ', religious: 'ਧਾਰਮਿਕ ਸਥਾਨ', nature: 'ਕੁਦਰਤ ਤੇ ਜੰਗਲੀ ਜੀਵ', heritage: 'ਵਿਰਾਸਤ',
+      food: 'ਖਾਣ-ਪੀਣ ਤੇ ਢਾਬੇ', shopping: 'ਖਰੀਦਦਾਰੀ', education: 'ਸਿੱਖਿਆ', culture: 'ਸੱਭਿਆਚਾਰ',
+      accommodation: 'ਰਹਿਣ ਦੀ ਥਾਂ', industry: 'ਉਦਯੋਗ', farm: 'ਫਾਰਮ ਹਾਊਸ',
+    } as Record<string, string>,
+    chatHello: 'ਸਤਿ ਸ੍ਰੀ ਅਕਾਲ! ਮੈਂ ਤੁਹਾਡਾ HPN Explorer ਗਾਈਡ ਹਾਂ। ਪੰਜਾਬ ਦੇ ਕਿਸੇ ਵੀ ਜ਼ਿਲ੍ਹੇ ਬਾਰੇ ਪੁੱਛੋ!',
+    chatDistrict: (d: string) => `ਤੁਸੀਂ ${d} ਦੇਖ ਰਹੇ ਹੋ। ਇਸ ਦੇ ਇਤਿਹਾਸ, ਖਾਣੇ ਜਾਂ ਉਦਯੋਗ ਬਾਰੇ ਕੀ ਦੱਸਾਂ?`,
+    chatPlaceholder: 'ਥਾਵਾਂ ਬਾਰੇ ਪੁੱਛੋ...',
+    chatThinking: 'ਸੋਚ ਰਿਹਾ ਹਾਂ...',
+    chatError: 'ਨੈੱਟਵਰਕ ਦੀ ਗਲਤੀ। ਕਿਰਪਾ ਕਰਕੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।',
+    chatGuide: (d?: string) => (d ? `${d} ਗਾਈਡ` : 'ਪੰਜਾਬ ਗਾਈਡ'),
+    chatWarn: 'AI ਦੇ ਜਵਾਬ ਗਲਤ ਹੋ ਸਕਦੇ ਹਨ। ਜ਼ਰੂਰੀ ਗੱਲਾਂ ਆਪ ਪੱਕੀਆਂ ਕਰੋ।',
+  },
+};
+
+export const DISTRICT_PA: Record<string, string> = {
+  bathinda: 'ਬਠਿੰਡਾ', amritsar: 'ਅੰਮ੍ਰਿਤਸਰ', mansa: 'ਮਾਨਸਾ', faridkot: 'ਫਰੀਦਕੋਟ',
+  muktsar: 'ਸ੍ਰੀ ਮੁਕਤਸਰ ਸਾਹਿਬ', ferozepur: 'ਫ਼ਿਰੋਜ਼ਪੁਰ', jalandhar: 'ਜਲੰਧਰ', hoshiarpur: 'ਹੁਸ਼ਿਆਰਪੁਰ',
+  rupnagar: 'ਰੂਪਨਗਰ (ਰੋਪੜ)', mohali: 'ਮੋਹਾਲੀ (ਐੱਸ.ਏ.ਐੱਸ. ਨਗਰ)', chandigarh: 'ਚੰਡੀਗੜ੍ਹ', barnala: 'ਬਰਨਾਲਾ',
+  patiala: 'ਪਟਿਆਲਾ', sangrur: 'ਸੰਗਰੂਰ', gurdaspur: 'ਗੁਰਦਾਸਪੁਰ', moga: 'ਮੋਗਾ',
+  'fatehgarh-sahib': 'ਫ਼ਤਹਿਗੜ੍ਹ ਸਾਹਿਬ', fazilka: 'ਫ਼ਾਜ਼ਿਲਕਾ', kapurthala: 'ਕਪੂਰਥਲਾ', ludhiana: 'ਲੁਧਿਆਣਾ',
+  malerkotla: 'ਮਲੇਰਕੋਟਲਾ', 'tarn-taran': 'ਤਰਨ ਤਾਰਨ', pathankot: 'ਪਠਾਨਕੋਟ', nawanshahr: 'ਨਵਾਂਸ਼ਹਿਰ',
+};
